@@ -38,7 +38,7 @@ void getFileContents(int argc, char file[]){
 // 	int add2Total = 0;
 
 // 	for (i = 0; i < LIMIT; i++){
-// 		if (blocks[i > ])
+// 		if (blocks[i] > )
 // 		add2Total = blocks[i] - blocks[i+1];
 // 		combinedSeekTime = combinedSeekTime + add2Total;
 // 	}
