@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "blockalgorithms.h"
+
 //Program 7 Block Access Algorithms
 
 #define LIMIT 20
@@ -31,7 +33,7 @@ void getFileContents(int argc, char file[]){
 	
 	fclose(filePtr);
 }
-// void FCFS(int blocks[]){
+/* void FCFS(int blocks[]){
 
 // 	int i = 0;
 // 	int combinedSeekTime = 0;
@@ -44,7 +46,7 @@ void getFileContents(int argc, char file[]){
 // 	}
 
 // 	printf("FCFS Total Seek: %d\n", combinedSeekTime);
-// }
+ }*/
 
 int main(int argc, char* argv[]){
 
@@ -56,7 +58,8 @@ int main(int argc, char* argv[]){
 		printf("%d\n", blockList[i]);
 	} 
 
-	FCFS(blockList);
+//	FCFS(blockList);
+	SST(blockList, LIMIT);
 
     printf("\n");
 return 0;
