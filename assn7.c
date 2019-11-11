@@ -46,6 +46,8 @@ int main(int argc, char* argv[]){
 
 	FCFS(blockList, LIMIT);
 	SST(blockList, LIMIT);
+	circular(blockList, LIMIT);
+
 
     printf("\n");
 return 0;
