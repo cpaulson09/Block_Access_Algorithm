@@ -4,25 +4,20 @@
 
 #include "blockalgorithms.h"
 
-void FCFS(int blocks[], int num){
+void FCFS(int blocks[], int numBlocks){
 
 	int i = 0;
-	int totalSeekAccumulator = 0;
-	int add2Total = 0;
+	int totalSeek = 0;
 
- 	for (i = 0; i < num; i++){
+ 	for (i = 0; i < numBlocks - 1; i++){
 
- 		//printf("Currently at: %d\n", blocks[i]);
+ 		// printf("Currently at: %d\n\n", blocks[i]);
  		if (blocks[i] > blocks[i+1]){
- 			add2Total = blocks[i] - blocks[i+1];
- 			// printf("add2total: %d\n", add2Total);  
+ 			totalSeek += blocks[i] - blocks[i+1];
  		}
  		else{
- 			add2Total = blocks[i+1] - blocks[i];
- 			// printf("add2total else: %d\n", add2Total);
+ 			totalSeek += blocks[i+1] - blocks[i];
  		}
-		totalSeekAccumulator = totalSeekAccumulator + add2Total;
-		add2Total = 0;
 	}
- 	printf("\nFCFS Total Seek: %d\n", totalSeekAccumulator);
+ 	printf("\nFCFS Total Seek: %d\n", totalSeek);
 }

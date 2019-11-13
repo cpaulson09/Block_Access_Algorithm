@@ -3,10 +3,6 @@
 #include <stdlib.h>
 #include "blockalgorithms.h"
 
-void createUpperArray(int *locationArray, int *greaterThanArray, int totalLocation);
-void createLowerArray(int *locationArray, int *lessThanArray, int *greaterThanArray, int totalLocations);
-
-
 void circular(int *locationArray, int num){
 
 	const int NUM_LOCATIONS = num;
@@ -28,8 +24,6 @@ void circular(int *locationArray, int num){
 
 	createUpperArray(locations, largerArray, NUM_LOCATIONS);
 	createLowerArray(locations, smallerArray, largerArray, NUM_LOCATIONS);
-
-
 
 	//calculate total seek
 
@@ -69,8 +63,6 @@ void circular(int *locationArray, int num){
 		}
 
 	}
-
-
 	printf("C-Look Total Seek: %d\n", totalSeek);
 
 }

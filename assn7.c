@@ -47,6 +47,7 @@ int main(int argc, char* argv[]){
 	FCFS(blockList, LIMIT);
 	SST(blockList, LIMIT);
 	circular(blockList, LIMIT);
+	nonCircular(blockList, LIMIT);
 
 
     printf("\n");
